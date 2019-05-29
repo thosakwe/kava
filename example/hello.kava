@@ -1,0 +1,5 @@
+open IO
+
+class Hello {
+  static main() -> IO.println("Hello, Kava!")
+}
