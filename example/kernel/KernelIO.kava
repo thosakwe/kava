@@ -1,0 +1,16 @@
+class KernelIO {
+  com1 = SerialPort(0x3F8)
+
+  write(c: u8) -> com1.write(c)
+
+  write(s: String) {
+    for (u64 i = 0; i < s.length; i++) {
+      com1.write(s.data[i])
+    }
+  }
+
+  writeln(s: String) {
+    write(s)
+    write('\n')
+  }
+}

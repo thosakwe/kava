@@ -1,0 +1,6 @@
+class Entrypoint {
+  static kernelMain() {
+    var io = KernelIO()
+    io.writeln("DEBUG TO SERIAL: Hello, Kava kernel!")
+  }
+}

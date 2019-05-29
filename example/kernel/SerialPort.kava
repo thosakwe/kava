@@ -1,0 +1,6 @@
+// Reads/writes a serial port.
+class SerialPort(port: u16) {
+  read(): u16 -> extern "serial_read"(port)
+
+  write(data: u16) extern "serial_write"(port, data)
+}
