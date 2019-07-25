@@ -10,4 +10,5 @@ abstract class String implements View<uint8> {
   public String operator+(bool value)
   public String operator+(String value)
   public String operator+(Object value) => this + value.toString()
+  public override String toString() => this
 }
