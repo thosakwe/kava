@@ -1,5 +1,0 @@
-(library
-  (name kava_text))
-(menhir
- (modules parser))
-(ocamllex lexer)
