@@ -1,0 +1,4 @@
+abstract class Iterator<T> {
+  T get current
+  bool goForward()
+}

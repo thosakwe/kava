@@ -1,0 +1,13 @@
+abstract class String implements View<uint8> {
+  public String operator+(int8 value)
+  public String operator+(int16 value)
+  public String operator+(int32 value)
+  public String operator+(int64 value)
+  public String operator+(uint8 value)
+  public String operator+(uint16 value)
+  public String operator+(uint32 value)
+  public String operator+(uint64 value)
+  public String operator+(bool value)
+  public String operator+(String value)
+  public String operator+(Object value) => this + value.toString()
+}

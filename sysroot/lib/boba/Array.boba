@@ -1,0 +1,28 @@
+class Array<T> extends View<T> {
+  public uint64 get length
+  private T* pointer
+
+  Array() {
+    pointer = null
+  }
+
+  Array(uint64 size) {
+    pointer = alloc<T>(size * sizeof(T))
+    length = size
+  }
+
+  ~Array() {
+    free(pointer)
+    pointer = null
+  }
+
+  public override T operator[](uint64 index) {
+    if (index < 0 || index >= length - 1) {
+      // TODO: Throw out-of-bounds
+    }
+  }
+
+  public override Iterator<T> get iterator {
+    return new ViewIterator<T>(this)
+  }
+}

@@ -1,0 +1,29 @@
+class ViewIterator<T> extends BidirectionalIterator<T> {
+  private final View<T> view
+  private uint64 index
+
+  ViewIterator(View<T> view) {
+    _current = default<T>
+    this.view = view
+  }
+
+  public T get current => _current
+
+  bool goForward() {
+    if (index >= view.length) {
+      return false
+    } else {
+      _current = view[index++]
+      return true
+    }
+  }
+
+  bool goBackward() {
+    if (index <=  0) {
+      return false
+    } else {
+      _current = view[index--]
+      return true
+    }
+  }
+}
