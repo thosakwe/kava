@@ -1,0 +1,8 @@
+class ArrayList<T> extends Array<T> implements List<T> {
+  public override void operator[](uint64 index, T value) {
+    if (index < 0 || index >= length - 1) {
+      // TODO: Throw out-of-bounds
+    }
+    pointer[index] = value
+  }
+}

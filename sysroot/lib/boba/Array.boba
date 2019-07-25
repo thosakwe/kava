@@ -20,6 +20,7 @@ class Array<T> extends View<T> {
     if (index < 0 || index >= length - 1) {
       // TODO: Throw out-of-bounds
     }
+    return pointer[index]
   }
 
   public override Iterator<T> get iterator {
