@@ -1,12 +1,3 @@
 class Hello {
-  // `entrypoint` is a reserved word.
-  // A method annotated with `entrypoint` emits a "main" symbol.
-  //
-  // What this method accepts as inputs depends on the Boba compiler
-  // you are working with.
-  //
-  // Only an integer can be returned. `0` is returned implicitly.
-  entrypoint() {
-    
-  }
+
 }
